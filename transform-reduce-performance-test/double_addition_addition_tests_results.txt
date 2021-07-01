@@ -1,0 +1,114 @@
+
+	double - addition - addition test results:
+
+	std::valarray<double> - transformation: addition - reduction: addition - implemented by its member methods:
+	number of tests		size of data		run-time
+	---------------		------------		--------
+	100			100			0.000082200
+	100			1000			0.000291600
+	100			10000			0.003549200
+	100			100000			0.019537300
+	100			1000000			0.542966200
+	1000			100			0.000449500
+	1000			1000			0.001156400
+	1000			10000			0.062338200
+	1000			100000			0.223480100
+	1000			1000000			5.150864900
+
+	std::valarray<double> - transformation: addition - reduction: addition - implemented by std::transform(std::execution::seq, ...) and std::accumulate(...):
+	number of tests		size of data		run-time
+	---------------		------------		--------
+	100			100			0.000033800
+	100			1000			0.000091500
+	100			10000			0.003273700
+	100			100000			0.022598700
+	100			1000000			0.548104700
+	1000			100			0.000257700
+	1000			1000			0.000953100
+	1000			10000			0.016366800
+	1000			100000			0.139232500
+	1000			1000000			4.587578400
+
+	std::valarray<double> - transformation: addition - reduction: addition - implemented by std::transform(std::execution::seq, ...) and std::reduce(std::execution::seq, ...):
+	number of tests		size of data		run-time
+	---------------		------------		--------
+	100			100			0.000033700
+	100			1000			0.000085700
+	100			10000			0.003154500
+	100			100000			0.021578700
+	100			1000000			0.501505600
+	1000			100			0.000199000
+	1000			1000			0.000719300
+	1000			10000			0.013522200
+	1000			100000			0.130232700
+	1000			1000000			4.610098600
+
+	std::valarray<double> - transformation: addition - reduction: addition - implemented by std::transform_reduce(std::execution::seq, ...):
+	number of tests		size of data		run-time
+	---------------		------------		--------
+	100			100			0.000000000
+	100			1000			0.000000100
+	100			10000			0.000000000
+	100			100000			0.000000000
+	100			1000000			0.000000000
+	1000			100			0.000000000
+	1000			1000			0.000000100
+	1000			10000			0.000000100
+	1000			100000			0.000000000
+	1000			1000000			0.000000100
+
+	std::valarray<double> - transformation: addition - reduction: addition - implemented by std::transform(std::execution::par, ...) and std::reduce(std::execution::par, ...):
+	number of tests		size of data		run-time
+	---------------		------------		--------
+	100			100			0.002631900
+	100			1000			0.002380900
+	100			10000			0.009326100
+	100			100000			0.031291700
+	100			1000000			0.504250500
+	1000			100			0.007148500
+	1000			1000			0.021896600
+	1000			10000			0.048491500
+	1000			100000			0.192182100
+	1000			1000000			4.934573600
+
+	std::valarray<double> - transformation: addition - reduction: addition - implemented by std::transform_reduce(std::execution::par, ...):
+	number of tests		size of data		run-time
+	---------------		------------		--------
+	100			100			0.000215600
+	100			1000			0.001224500
+	100			10000			0.003343900
+	100			100000			0.007153700
+	100			1000000			0.073997700
+	1000			100			0.003092700
+	1000			1000			0.010777500
+	1000			10000			0.018594600
+	1000			100000			0.063396100
+	1000			1000000			0.762841300
+
+	std::valarray<double> - transformation: addition - reduction: addition - implemented by std::transform(std::execution::par_unseq, ...) and std::reduce(std::execution::par_unseq, ...):
+	number of tests		size of data		run-time
+	---------------		------------		--------
+	100			100			0.001367700
+	100			1000			0.001928400
+	100			10000			0.008006800
+	100			100000			0.035347800
+	100			1000000			0.499748500
+	1000			100			0.007203600
+	1000			1000			0.021196100
+	1000			10000			0.046154400
+	1000			100000			0.179869400
+	1000			1000000			4.944012800
+
+	std::valarray<double> - transformation: addition - reduction: addition - implemented by std::transform_reduce(std::execution::par_unseq, ...):
+	number of tests		size of data		run-time
+	---------------		------------		--------
+	100			100			0.000242000
+	100			1000			0.001124900
+	100			10000			0.001958100
+	100			100000			0.008964400
+	100			1000000			0.075744100
+	1000			100			0.003059600
+	1000			1000			0.010568200
+	1000			10000			0.018200900
+	1000			100000			0.059298000
+	1000			1000000			0.771274800
