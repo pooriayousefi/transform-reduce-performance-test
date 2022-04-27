@@ -6,6 +6,6 @@ Testing criteria are data type, container data structure (default is std::valarr
 
 Requirements:
 
--std=c++17
+Activate -std=c++17 language standard
 
-Greek Language Package Installed
+Install Greek language package on OS
